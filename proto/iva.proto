@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+
+package iva;
+
+service IVA {
+    rpc Signal(SignalRequest) returns (SignalReply) {}
+}
+
+message SignalRequest {
+    string url = 1;
+    string action = 2;
+}
+
+message SignalReply {
+    string status = 1;
+}
